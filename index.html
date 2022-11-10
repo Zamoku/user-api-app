@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js"
+        integrity="sha512-0qU9M9jfqPw6FKkPafM3gy2CBAvUWnYVOfNPDYKVuRTel1PrciTj+a9P3loJB+j0QmN2Y0JYQmkBBS8W+mbezg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <title>Document</title>
+
+    <script class="usersTemplate" type="text/template-x">
+        {{#each users}}
+          <tr>
+                <td>{{id}}</td>
+                <td>{{name}}</td>
+                <td>{{email}}</td>
+                <td>{{username}}</td>
+                <td><button data-id="{{id}}">Show posts</button></td>
+            </tr>
+            {{/each}}
+    </script>
+
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+    <h1>User API</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>fullName</th>
+                <th>Email</th>
+                <th>Username</th>
+            </tr>
+        </thead>
+        <tbody class="users">
+            <!-- Put data from the API in here -->
+
+        </tbody>
+    </table>
+
+    <h2>Posts</h2>
+    <div class="posts">
+        
+    </div>
+</body>
+
+</html>
